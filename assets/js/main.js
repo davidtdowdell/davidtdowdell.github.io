@@ -167,7 +167,7 @@
 				// Toggle.
 					$menu._toggle();
 					//DAVID Testing jQuery POST here
-					$.post("demo_test_post.asp", 
+					$.post("pythoncode.py", 
 							{
 								name: "Donald Duck",
 								city: "Duckburg"
@@ -179,7 +179,7 @@
 					var your_param = 'abc';
 					console.log("hello")
 					$.ajax({
-						url: '~/pythoncode.py' + your_param,
+						url: 'pythoncode.py',
 						type: 'GET',
 						success: function (response) {
 						console.log(response);
@@ -190,8 +190,8 @@
 					});
 					$.ajax({
 						type: "POST",
-						url: "~/pythoncode.py",
-						data: { param: text}
+						url: "pythoncode.py",
+						data: { param: "aa"}
 						}).done(function( o ) {
    // do something
 });
