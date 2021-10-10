@@ -175,13 +175,26 @@
 							function(data, status){
 								alert("Data: " + data + "\nStatus: " + status);
 					});
+         
+					var your_param = 'abc';
 					$.ajax({
-							type: "POST",
-							url: "https://davids-data.herokuapp.com/pythoncode.py",
-							data: { param: text}
-							}).done(function( o ) {
-								alert(o)
-							})
+						url: '~/pythoncode.py' + your_param,
+						type: 'GET',
+						success: function (response) {
+						console.log(response);
+						},
+						error: function (error) {
+						console.log(error);
+						}
+					});
+					$.ajax({
+						type: "POST",
+						url: "~/pythoncode.py",
+						data: { param: text}
+						}).done(function( o ) {
+   // do something
+});
+
 
 			})
 			.on('click', function(event) {
