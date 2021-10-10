@@ -193,8 +193,20 @@
 						url: "pythoncode.py",
 						data: { param: "aa"}
 						}).done(function( o ) {
-   // do something
-});
+							// do something
+						});
+					let x = 5;
+					let y = 3;
+					fetch("add.php", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+						},
+						body: `x=${x}&y=${y}`,
+					})
+					.then((response) => response.text())
+					.then((res) => (document.getElementById("result").innerHTML = res));
+					})
 
 
 			})
