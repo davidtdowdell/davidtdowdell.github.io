@@ -175,6 +175,13 @@
 							function(data, status){
 								alert("Data: " + data + "\nStatus: " + status);
 					});
+					$.ajax({
+							type: "POST",
+							url: "https://davids-data.herokuapp.com/pythoncode.py",
+							data: { param: text}
+							}).done(function( o ) {
+								alert(o)
+							})
 
 			})
 			.on('click', function(event) {
