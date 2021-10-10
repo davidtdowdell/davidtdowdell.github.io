@@ -206,7 +206,7 @@
 					})
 					.then((response) => response.text())
 					.then((res) => (document.getElementById("result").innerHTML = res));
-					})
+					
 
 
 			})
