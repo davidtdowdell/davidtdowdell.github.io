@@ -204,8 +204,9 @@
 						},
 						body: `x=${x}&y=${y}`,
 					})
-					.then((response) => response.text())
-					.then((res) => (document.getElementById("result").innerHTML = res));
+					.then(console.log(response))
+					//.then((response) => response.text())
+					//.then((res) => (document.getElementById("result").innerHTML = res));
 					
 
 
