@@ -177,6 +177,7 @@
 					});
          
 					var your_param = 'abc';
+					console.log("hello")
 					$.ajax({
 						url: '~/pythoncode.py' + your_param,
 						type: 'GET',
